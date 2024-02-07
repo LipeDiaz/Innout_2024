@@ -16,14 +16,14 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href=".php">
+                <a href="manager_report.php">
                     <i class="icofont-chart-histogram mr-2">
                         Relatório Gerencial
                     </i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href=".php">
+                <a href="users.php">
                     <i class="icofont-users mr-2">
                         Usúarios
                     </i>

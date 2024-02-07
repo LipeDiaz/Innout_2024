@@ -45,7 +45,7 @@ class Model {
     }    
 
 
-    public static function get($filters, $columns = '*') {
+    public static function get($filters = [], $columns = '*') {
         $objects = [];
         $result = static::getResultSetFromSelect($filters, $columns);
         if($result) {
@@ -92,6 +92,11 @@ class Model {
         Database::executeSQL($sql);
     }
 
+    public static function getCount($filters = []) {
+        $result = static::getResultSetFromSelect(
+            $filters, 'count(*) as count');
+        return $result->fetch_assoc()['count'];
+    }
 
     private static function getFilters($filters) {
         $sql = '';
